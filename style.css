@@ -1,31 +1,52 @@
-/*Gestion de la barre de navigation principale*/
+/*Mise en forme de la barre de navigation*/
 .navbar {
-    overflow: hidden;
+    width: 100%;
+    background-color: black;
+    color: white;
+    overflow: auto;
 }
 
+/*Mise en forme des liens de la navbar*/
 .navbar a {
     float: left;
-    font-size: 16px;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px;
+    color: white;
     text-decoration: none;
+    font-size: 17px;
 }
 
-/*Gestion de la barre de navigation secondire*/
+/*Mise en forme de la navbar : passage de la souris*/
+.navbar a:hover {
+    background-color: black;
+}
+
+/*Mise en forme du menu activé de la navbar*/
+.active {
+    background-color: #04aa6d;
+}
+
+/*Mise en forme du menu si l'écran fait moins de 500px*/
+@media  screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+/*Mise en forme du sous-menu*/
 .subnav {
     float: left;
-    overflow: hidden;
+    overflow: auto;
 }
 
-/*Gestion des boutons*/
+/*Mise en forme des boutons du sous menu*/
 .subnav .subnav-btn {
-    font-size: 16px;
+    font-size: 17px;
     border: none;
     outline: none;
-    color: black;
-    padding: 14px 16px;
+    color: white;
+    padding: 15px 17px;
     background-color: inherit;
-    font-style: inherit;
-    margin: 0;
+    
 }
-
