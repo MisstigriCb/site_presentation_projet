@@ -1,11 +1,17 @@
 /*Mise en forme de la barre de navigation*/
 .navbar {
-    width: 100%;
-    background-color: black;
-    color: white;
-    overflow: auto;
+    background-image: url(images/sandman.jpg);
+    min-height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
+.contain{
+    background-color: black;
+    overflow: hidden;
+}
 /*Mise en forme des liens de la navbar*/
 .navbar a {
     float: left;
@@ -13,12 +19,12 @@
     padding: 12px;
     color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
-/*Mise en forme de la navbar : passage de la souris*/
-.navbar a:hover {
-    background-color: black;
+/*Mise en forme de la navbar, sous-menu et bouton: passage de la souris*/
+.navbar a:hover, .subnav:hover .subnav-btn {
+    background-color: #555;
 }
 
 /*Mise en forme du menu activé de la navbar*/
@@ -32,6 +38,10 @@
         float: none;
         display: block;
     }
+
+    .navbar input[type=text] {
+        border: 1px solid #ccc;
+    }
 }
 
 /*Mise en forme du sous-menu*/
@@ -42,11 +52,43 @@
 
 /*Mise en forme des boutons du sous menu*/
 .subnav .subnav-btn {
-    font-size: 17px;
+    font-size: 16px;
     border: none;
     outline: none;
-    color: white;
-    padding: 15px 17px;
+    color: whitesmoke;
+    padding: 12px 14px;
     background-color: inherit;
-    
+    margin: 0;
 }
+
+/*Mise en forme du contenu des sous-menus - position absolue*/
+.subnav-content {
+    display: none;
+    position : absolute;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+/*Mise en forme des liens du sous-menu*/
+.subnav-content a:hover {
+    background-color: #04aa6d;
+    color: black;
+}
+
+/*Passage de la souris sur le contenu du sous menu et l'ouvre*/
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+/*Barre de recherche de la navbar*/
+.navbar input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 12px;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
