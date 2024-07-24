@@ -142,5 +142,26 @@ button:hover, a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
+    margin-left: 50px;
 }
 
+/*Galerie*/
+.contain_draw {
+    position: relative;
+    border: #000 solid 3px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: O auto;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.contain_draw .content_text {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.5);
+    color: #f1f1f1;
+    width: 95%;
+    padding: 20px;
+}
